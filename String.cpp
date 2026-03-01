@@ -9,6 +9,12 @@ public:
     for(int i = 0; i < this->size; ++i) this->str[i] = str[i];
     this->str[size] = '\0';
   }
+  String(const String& other){
+    this->str = new char[other.size + 1];
+    this->size = other.size;
+    for (int i = 0; i < size; ++i) this->str[i] = other.str[i];          
+    str[size] = '\0';                   
+  }
   ~String(){
     delete[] str;
   }
