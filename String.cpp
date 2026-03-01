@@ -5,7 +5,7 @@ class String{
 public:
   String(const char* str, uint8_t size){
     this->str = new char[size+1];
-    this->size = ;
+    this->size = size;
     for(int i = 0; i < this->size; ++i) this->str[i] = str[i];
     this->str[size] = '\0';
   }
